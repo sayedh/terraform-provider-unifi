@@ -250,13 +250,13 @@ func resourceNetwork() *schema.Resource {
 			},
 
 			// Deprecated from paultyng/go-unifi - UnifiVersion = "7.4.162"
-			// "internet_access_enabled": {
-			// 	Description: "Specifies whether this network should be allowed to access the internet or not.",
-			// 	Type:        schema.TypeBool,
-			// 	Optional:    true,
-			// 	Default:     true,
-			// },
-
+			// Undeprecated - feature is still present in UnifiVersion = "8.3.32".
+			"internet_access_enabled": {
+				Description: "Specifies whether this network should be allowed to access the internet or not.",
+				Type:        schema.TypeBool,
+				Optional:    true,
+				Default:     true,
+			},
 			"intra_network_access_enabled": {
 				Description: "Specifies whether this network should be allowed to access other local networks or not.",
 				Type:        schema.TypeBool,
